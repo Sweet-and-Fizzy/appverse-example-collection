@@ -1,0 +1,18 @@
+# Per-app appverse.yml — Jupyter example
+#
+# This file enriches the catalog entry for the app at this subpath. The
+# Collection-level appverse.yml at the repo root declares this subpath in
+# its `apps:` list; the catalog reads this file to populate the app's
+# catalog metadata.
+
+name: Jupyter (Example)
+description: A reference Jupyter launcher demonstrating per-app appverse.yml structure. Not deployable as-is.
+app_type: Batch Connect
+
+maintainer:
+  name: ACCESS Support
+  support_url: https://github.com/Sweet-and-Fizzy/appverse-example-collection/issues
+
+tags:
+  - Batch Connect
+  - Containerized

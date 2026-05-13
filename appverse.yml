@@ -1,0 +1,35 @@
+# appverse.yml — example Collection manifest for the OOD Appverse catalog.
+#
+# This file declares a Collection: a source repo that produces one or more
+# Appverse apps. The catalog reads these top-level keys to build the
+# Collection detail page. Each entry in `apps:` points to a subpath where
+# the app's own manifest.yml + form.yml + (optional) appverse.yml live.
+#
+# This repo is a reference example — copy from it when authoring your own
+# appverse.yml. See https://openondemand.connectci.org/appverse-contributor-documentation
+# for the full schema.
+
+appverse:
+  min_version: "1.0"
+
+title: Appverse Example Collection
+description: A reference multi-app repo demonstrating the appverse.yml schema. Use this as a starting point for declaring your own Collection.
+
+website: https://openondemand.connectci.org/appverse
+docs: https://openondemand.connectci.org/appverse-contributor-documentation
+
+maintainer:
+  name: ACCESS Support
+  support_url: https://github.com/Sweet-and-Fizzy/appverse-example-collection/issues
+
+tags:
+  - simulation
+  - bioinformatics
+
+shared_paths:
+  - app-templates/
+  - shared/job-scripts/
+
+apps:
+  - path: jupyter_example
+  - path: rstudio_example

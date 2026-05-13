@@ -1,0 +1,23 @@
+---
+cluster:
+  - "example_cluster"
+
+form:
+  - bc_num_hours
+  - num_cores
+
+attributes:
+  bc_num_hours:
+    widget: number_field
+    min: 1
+    max: 24
+    step: 1
+    value: 1
+    label: Hours
+  num_cores:
+    widget: number_field
+    min: 1
+    max: 16
+    step: 1
+    value: 1
+    label: Cores

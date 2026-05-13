@@ -1,0 +1,8 @@
+---
+name: RStudio (Example)
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  Example RStudio launcher app, part of the Appverse Example Collection.
+  This is a reference implementation — not deployable as-is.

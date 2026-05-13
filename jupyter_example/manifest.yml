@@ -1,0 +1,8 @@
+---
+name: Jupyter (Example)
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  Example Jupyter launcher app, part of the Appverse Example Collection.
+  This is a reference implementation — not deployable as-is.
