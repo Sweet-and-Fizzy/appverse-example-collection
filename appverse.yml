@@ -2,8 +2,11 @@
 #
 # This file declares a Collection: a source repo that produces one or more
 # Appverse apps. The catalog reads these top-level keys to build the
-# Collection detail page. Each entry in `apps:` points to a subpath where
-# the app's own manifest.yml + form.yml + (optional) appverse.yml live.
+# Collection detail page. Each entry in `apps:` declares one app:
+#   - path: <subpath>          (required) — the directory containing manifest.yml
+#     software: <name>          (required for multi-app Collections) — must match
+#                                 an existing Software entry in the Appverse catalog
+#                                 (case-insensitive title match)
 #
 # This repo is a reference example — copy from it when authoring your own
 # appverse.yml. See https://openondemand.connectci.org/appverse-contributor-documentation
@@ -31,5 +34,24 @@ shared_paths:
   - shared/job-scripts/
 
 apps:
+  # Per-subpath form: Appverse metadata in jupyter_example/appverse.yml
+  # alongside manifest.yml / form.yml / README.md. Recommended default.
   - path: jupyter_example
+
+  # Root-inline form: Appverse metadata declared right here on the
+  # apps[] entry; no rstudio_example/appverse.yml file. The subpath
+  # still has manifest.yml + form.yml + README.md (OoD's launcher
+  # still needs them). Terser for small Collections; demonstrates the
+  # alternative form. When both forms declare the same field for one
+  # app, root-inline wins.
   - path: rstudio_example
+    software: RStudio
+    name: RStudio (Example)
+    description: A reference RStudio launcher demonstrating root-inline appverse declaration. Not deployable as-is.
+    app_type: Batch Connect
+    maintainer:
+      name: ACCESS Support
+      support_url: https://github.com/Sweet-and-Fizzy/appverse-example-collection/issues
+    tags:
+      - Batch Connect
+      - Modules
